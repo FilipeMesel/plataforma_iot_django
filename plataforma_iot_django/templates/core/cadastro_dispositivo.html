@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Dispositivo IoT</title>
+</head>
+<body>
+    <h1>Cadastro de Dispositivo IoT</h1>
+    <form method="post" action="{% url 'cadastrar_dispositivo' %}">
+        {% csrf_token %}
+        <label for="serialNumber">Número de Série:</label>
+        <input type="text" name="serialNumber" required><br>
+
+        <label for="dados">Dados (JSON):</label>
+        <textarea name="dados" rows="4" cols="50"></textarea><br>
+
+        <button type="submit">Cadastrar Dispositivo</button>
+    </form>
+</body>
+</html>

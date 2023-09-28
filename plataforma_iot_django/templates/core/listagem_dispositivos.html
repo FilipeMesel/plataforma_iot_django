@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Dispositivos IoT</title>
+</head>
+<body>
+    <h1>Listagem de Dispositivos IoT</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Número de Série</th>
+                <th>Dados</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for dispositivo in dispositivos %}
+            <tr>
+                <td>{{ dispositivo.id }}</td>
+                <td>{{ dispositivo.serialNumber }}</td>
+                <td>{{ dispositivo.dados }}</td>
+                <td>{{ dispositivo.timestamp }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
